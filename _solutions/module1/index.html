@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="LunchCheck" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Check your lunch</title>
+</head>
+
+<body>
+    <h1>Check your lunch</h1>
+    <div ng-controller="LunchCheckController">
+        <p>Insert your lunch. Make a comma-separated list:</p>
+        <input type="text" ng-model="lunchList"> {{ lunchMsg }}
+        <br>
+        <button ng-click="checkLunch()">Check Lunch</button>
+    </div>
+
+</body>
+
+</html>
