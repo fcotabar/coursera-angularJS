@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="MsgApp" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Filter</title>
+</head>
+
+<body>
+    <h1>Custom Filter</h1>
+    <div ng-controller="MsgController">
+        {{ name }} has a message for you:
+        <br> Original Message: {{ sayMessage() }}
+        <br> Loves (custom filter) Message: {{ sayLovesMessage() }}
+        <div>
+            <button ng-click="feedYaakov()">Feed Yaakov</button> Cost: {{ cookieCost | currency : '$€ ' : 3 }}
+            <br>
+            <img ng-src="img/yaakov_{{ stateOfBeing }}.png" alt="Yakoov Hungry">
+        </div>
+    </div>
+</body>
+
+</html>

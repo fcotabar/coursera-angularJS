@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="DigestCycleApp" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>ng-repeat - Digest Cycle</title>
+</head>
+
+<body>
+    <h1>ng-repeat - Digest Cycle</h1>
+    <div ng-controller="DigestCycleController">
+        <button ng-click="showNumberOfWatchers()">Log # of Watches</button>
+        <div>
+            <button ng-click="countOnce()">Up Once Counter (once)</button>
+            <button ng-click="upCounter()">Up counter</button>
+        </div>
+        <div>
+            Once counter: {{ onceCounter }}
+            <br> Regular counter: {{ counter }}
+        </div>
+    </div>
+
+</body>
+
+</html>
