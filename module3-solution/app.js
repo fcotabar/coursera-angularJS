@@ -4,7 +4,7 @@
     angular.module('NarrowItDownApp', [])
         .controller('NarrowItDownController', NarrowItDownController)
         .service('MenuSearchService', MenuSearchService)
-        .constant('ApiBasePath', "http://davids-restaurant.herokuapp.com")
+        .constant('ApiBasePath', "https://davids-restaurant.herokuapp.com")
         .directive('foundItems', FoundItemsDirective);
 
     function FoundItemsDirective() {
@@ -14,52 +14,10 @@
                 menu: '<myItems',
                 onRemove: '&'
             }
-            // link: MenuSearchDirectiveLink
         };
 
         return ddo;
     }
-    /* 
-        function MenuSearchDirectiveLink(scope, element, attr, controller) {
-            // console.log("Link scope is: ", scope);
-            // console.log("Controller instance is: ", controller);
-            // console.log("Element is: ", element);
-
-
-            scope.$watch('menu.nothingFoundF()', function(newValue, oldValue) {
-                console.log("Old value: ", oldValue);
-                console.log("New value: ", newValue);
-
-                // if (newValue === true) {
-                //     displayCookieWarning();
-                // } else {
-                //     removeCookieWarning();
-                // }
-            });
-
-            function displayCookieWarning() {
-                // Using Angular jqLite
-                // var warningElem = element.find("div");
-                // console.log(warningElem);
-                // warningElem.css('display', 'block');
-
-                // If jQuery included before Angular
-                var warningElem = element.find('div.error');
-                warningElem.slideDown(900);
-
-            }
-
-            function removeCookieWarning() {
-                // Using Angular jqLite
-                // var warningElem = element.find("div");
-                // warningElem.css('display', 'none');
-
-                // If jQuery included before Angular
-                var warningElem = element.find('div.error');
-                warningElem.slideUp(900);
-            }
-        }
-     */
 
     NarrowItDownController.$inject = ['MenuSearchService'];
 
