@@ -1,0 +1,7 @@
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="item in $ctrl.items">
+        <span class="list-group-item-heading">{{ item.name }}</span>
+        <span class="badge">Price: {{ item.price_large }}</span>
+        <p ng-if="item.description"> Description: {{ item.description }} </p>
+    </li>
+</ul>
