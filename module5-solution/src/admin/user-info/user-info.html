@@ -1,0 +1,38 @@
+<div class="container">
+
+    <div ng-if="!usr.registred">
+        <h1>Not Signed Up Yet. <a ui-sref="admin.registration">Sign up Now!</a></h1>
+    </div>
+    <div ng-if="usr.registred">
+        <h1>User info</h1>
+        <span>First name: {{ usr.info.name }}</span>
+        <br>
+        <span>Last name: {{ usr.info.lastName }}</span>
+        <br>
+        <span>Email: {{ usr.info.email }}</span>
+        <br>
+        <span>Phone: {{ usr.info.phone }}</span>
+
+        <h2>Favorite Dish</h2>
+        <div class="menu-item-tile col-md-6">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="menu-item-photo">
+                        <div>{{usr.info.dish.short_name}}</div>
+                        <img class="img-responsive" width="250" height="150" ng-src="images/menu/{{usr.info.dishCat}}/{{usr.info.dishCat}}.jpg" alt="{{usr.info.dish.name}}">
+                    </div>
+                    <div class="menu-item-price">{{usr.info.dish.price_small | currency }}
+                        <span> {{usr.info.dish.small_portion_name}}</span> {{usr.info.dish.price_large | currency }}
+                        <span>{{usr.info.dish.large_portion_name}}</span>
+                    </div>
+                </div>
+                <div class="menu-item-description col-sm-7">
+                    <h3 class="menu-item-title">{{usr.info.dish.name}}</h3>
+                    <p class="menu-item-details">{{usr.info.dish.description}}</p>
+                </div>
+            </div>
+            <hr class="visible-xs">
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,33 @@
+input {
+    /* font-size: 24px; */
+    margin-bottom: 10px;
+    color: black;
+}
+
+legend {
+    color: white;
+}
+
+button {
+    /* font-size: 24px; */
+    color: #61122f;
+}
+
+.ng-touched.ng-valid {
+    border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+    border: 2px red solid;
+}
+
+#info {
+    margin-top: 20px;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: gray;
+    /* Firefox */
+    opacity: 0.6;
+}
